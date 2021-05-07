@@ -1,0 +1,55 @@
+{
+	"name": "wordpress-block-markup",
+	"publisher": "CarolinaNymark",
+	"displayName": "WordPress block markup",
+	"description": "WordPress block markup autocomplete snippets for full site editing",
+	"icon": "images/icon.png",
+	"repository": "https://github.com/carolinan/block-markup-snippets",
+	"license": "GPL-2.0-or-later",
+	"author": {
+		"name": "Carolina Nymark"
+	},
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"WordPress",
+		"Full site editing"
+	],
+	"galleryBanner": {
+		"color": "#3f2b6e",
+		"theme": "dark"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"path": "./.code-snippets"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.55.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.19.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.2.1",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	}
+}
