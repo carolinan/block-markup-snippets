@@ -12,6 +12,9 @@ For example, to add a template part, start typing "wp:template-part" or just "te
 
 ## Release Notes
 
+### 1.1.1
+Bug fix
+
 ### 1.1.0
 
 Replaced the query-loop block with post-template.
