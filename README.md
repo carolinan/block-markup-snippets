@@ -12,6 +12,12 @@ For example, to add a template part, start typing "wp:template-part" or just "te
 
 ## Release Notes
 
+### 1.1.0
+
+Replaced the query-loop block with post-template.
+Added the inner div to the query block.
+Updated: Query pagination, Search.
+
 ### 1.0.0
 
 Initial release of WordPress block markup.
