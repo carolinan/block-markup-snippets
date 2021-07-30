@@ -21,15 +21,15 @@
 		"prefix": "block-buttons, block-button, wp:buttons, wp:button",
 		"body": [
 			"<!-- wp:buttons -->",
-				"<div class=\"wp-block-buttons\">",
-					"<!-- wp:button -->",
-					"<div class=\"wp-block-button\"><a class=\"wp-block-button__link\">My button 1</a></div>",
-					"<!-- /wp:button -->",
-					"",
-					"<!-- wp:button -->",
-					"<div class=\"wp-block-button\"><a class=\"wp-block-button__link\">My button 2</a></div>",
-					"<!-- /wp:button -->",
-				"</div>",
+			"<div class=\"wp-block-buttons\">",
+			"<!-- wp:button -->",
+			"<div class=\"wp-block-button\"><a class=\"wp-block-button__link\">My button 1</a></div>",
+			"<!-- /wp:button -->",
+			"",
+			"<!-- wp:button -->",
+			"<div class=\"wp-block-button\"><a class=\"wp-block-button__link\">My button 2</a></div>",
+			"<!-- /wp:button -->",
+			"</div>",
 			"<!-- /wp:buttons -->"
 		],
 	},
@@ -58,11 +58,11 @@
 		"body": [
 			"<!-- wp:columns -->",
 			"<div class=\"wp-block-columns\">",
-				"<!-- wp:column -->",
-				"<div class=\"wp-block-column\">",
-				"</div>",
-				"<!-- /wp:column -->",
-				"</div>",
+			"<!-- wp:column -->",
+			"<div class=\"wp-block-column\">",
+			"</div>",
+			"<!-- /wp:column -->",
+			"</div>",
 			"<!-- /wp:columns -->",
 		],
 	},
@@ -81,9 +81,9 @@
 	"File block": {
 		"prefix": "block-file, wp:file",
 		"body": [
-		"<!-- wp:file {\"id\":123,\"href\":\"\"} -->",
-		"<div class=\"wp-block-file\"><a href=\"\" class=\"wp-block-file__button\" download>Download</a></div>",
-		"<!-- /wp:file -->"
+			"<!-- wp:file {\"id\":123,\"href\":\"\"} -->",
+			"<div class=\"wp-block-file\"><a href=\"\" class=\"wp-block-file__button\" download>Download</a></div>",
+			"<!-- /wp:file -->"
 		],
 	},
 	"Gallery block": {
@@ -305,22 +305,26 @@
 		],
 	},
 	"Query block": {
-			"prefix": "block-query, wp:query, post list",
-			"body": [
-				"<!-- wp:query {\"queryId\":0} --><!-- /wp:query /-->"
-			],
-	},
-	"Query Loop block": {
-		"prefix": "block-loop, query-loop, wp:query-loop",
+		"prefix": "block-query, wp:query, post list, posts list, block-loop, query-loop",
 		"body": [
-			"<!-- wp:query-loop --><!-- /wp:query-loop -->"
+			"<!-- wp:query {\"queryId\":0} --><div class=\"wp-block-query\"></div><!-- /wp:query /-->"
+		],
+	},
+	"Post template block": {
+		"prefix": "wp:post-template, post template, block-post-template, wp:query-loop",
+		"body": [
+			"<!-- wp:post-template --><!-- /wp:post-template -->"
 		],
 	},
 	"Query pagination block": {
-			"prefix": "block-query-pagination, query-pagination, wp:query-pagination",
-			"body": [
-				"<!-- wp:query-pagination /-->"
-			],
+		"prefix": "block-query-pagination, query-pagination, wp:query-pagination",
+		"body": [
+			"<!-- wp:query-pagination --><div class=\"wp-block-query-pagination\">",
+			"<!-- wp:query-pagination-previous /-->",
+			"<!-- wp:query-pagination-numbers /-->",
+			"<!-- wp:query-pagination-next /--></div>",
+			"<!-- /wp:query-pagination -->",
+		],
 	},
 	"Quote block": {
 		"prefix": "block-quote, wp:quote ",
@@ -345,7 +349,7 @@
 	"Search block": {
 		"prefix": "block-search, wp:search",
 		"body": [
-			"<!-- wp:search /-->"
+			"<!-- wp:search {\"label\":\"Search\",\"buttonText\":\"Search\"} /-->"
 		],
 	},
 	"Separator block": {
@@ -390,9 +394,9 @@
 		"prefix": "block-social-links, block-social, wp:social-links",
 		"body": [
 			"<!-- wp:social-links -->",
-				"<ul class=\"wp-block-social-links\">",
-					"<!-- wp:social-link {\"service\":\"spotify\",\"url\":\"https://example.com/\"} /-->",
-				"</ul>",
+			"<ul class=\"wp-block-social-links\">",
+			"<!-- wp:social-link {\"service\":\"spotify\",\"url\":\"https://example.com/\"} /-->",
+			"</ul>",
 			"<!-- /wp:social-links -->"
 		],
 	},
