@@ -12,7 +12,33 @@ For example, to add a template part, start typing "wp:template-part" or just "te
 
 ## Release Notes
 
+### 1.2.0
+
+Added new blocks:
+Comments query loop
+Comment template
+Comments pagination
+Comment author avatar
+Comment author name
+Comment content
+Comment reply link
+Comment edit link
+Post author name
+
+Added Shortcuts for header and footer template parts,
+row group block variation.
+
+Updated blocks:
+Archives
+Gallery
+Navigation
+Query pagination
+
+Removed blocks:
+Navigation link. This markup is no longer used, because the navigation block uses a reference ID instead.
+
 ### 1.1.1
+
 Bug fix
 
 ### 1.1.0

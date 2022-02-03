@@ -8,7 +8,7 @@
 	"Archives block": {
 		"prefix": "block-archive, wp:archives",
 		"body": [
-			"<!-- wp:archives {\"displayAsDropdown\":false,\"showPostCounts\":false} /-->"
+			"<!-- wp:archives /-->"
 		],
 	},
 	"Audio block": {
@@ -66,6 +66,66 @@
 			"<!-- /wp:columns -->",
 		],
 	},
+	"Comment author avatar block": {
+		"prefix": "block-comment-author-avatar, wp:comment-author-avatar, comment author avatar, comment avatar",
+		"body": [
+			"<!-- wp:comment-author-avatar /-->"
+		],
+	},
+	"Comment author name block": {
+		"prefix": "block-comment-author-name, wp:comment-author-name, comment author name,",
+		"body": [
+			"<!-- wp:comment-author-name /-->"
+		],
+	},
+	"Comment date block": {
+		"prefix": "block-comment-date, wp:comment-date, comment date,",
+		"body": [
+			"<!-- wp:comment-date /-->"
+		],
+	},
+	"Comment edit link block": {
+		"prefix": "block-comment-edit-link, wp:comment-edit-link, comment edit link,",
+		"body": [
+			"<!-- wp:comment-edit-link /-->"
+		],
+	},
+	"Comment content block": {
+		"prefix": "block-comment-content, wp:comment-content, comment content,",
+		"body": [
+			"<!-- wp:comment-content /-->"
+		],
+	},
+	"Comments pagination block": {
+		"prefix": "block-comments-pagination, wp:comments-pagination",
+		"body": [
+			"<!-- wp:comments-pagination -->",
+			"<!-- wp:comments-pagination-previous /-->",
+			"<!-- wp:comments-pagination-numbers /-->",
+			"<!-- wp:comments-pagination-next /-->",
+			"<!-- /wp:comments-pagination -->"
+		],
+	},
+	"Comments query loop block": {
+		"prefix": "block-comments-query, block-comments-query-loop, wp:comments-query-loop",
+		"body": [
+			"<!-- wp:comments-query-loop -->",
+			"<div class=\"wp-block-comments-query-loop\"></div>",
+			"<!-- /wp:comments-query-loop -->",
+		],
+	},
+	"Comment reply link block": {
+		"prefix": "block-comment-reply-link, wp:comment-reply-link, wp:comment-reply, comment reply,",
+		"body": [
+			"<!-- wp:comment-reply-link /-->"
+		],
+	},
+	"Comment template block": {
+		"prefix": "wp:comment-template, comment template, block-comment-template, wp:comment-template",
+		"body": [
+			"<!-- wp:comment-template --><!-- /wp:comment-template -->"
+		],
+	},
 	"Cover block": {
 		"prefix": "block-cover, wp:cover",
 		"body": [
@@ -86,11 +146,22 @@
 			"<!-- /wp:file -->"
 		],
 	},
+	"Footer template part": {
+		"prefix": "footer template part, wp:footer",
+		"body": [
+			"<!-- wp:template-part {\"slug\":\"footer\",\"tagName\":\"footer\"} /-->"
+		],
+	},
 	"Gallery block": {
 		"prefix": "block-gallery, wp:gallery",
 		"body": [
 			"<!-- wp:gallery {\"linkTo\":\"none\"} -->",
-			"<figure class=\"wp-block-gallery columns-0 is-cropped\"><ul class=\"blocks-gallery-grid\"></ul></figure>",
+			"<figure class=\"wp-block-gallery has-nested-images columns-default is-cropped\"><!-- wp:image {\"className\":\"size-large\"} -->",
+			"<figure class=\"wp-block-image size-large\"><img alt=\"\"/></figure>",
+			"<!-- /wp:image -->",
+			"<!-- wp:image {\"className\":\"size-large\"} -->",
+			"<figure class=\"wp-block-image size-large\"><img alt=\"\"/></figure>",
+			"<!-- /wp:image --></figure>",
 			"<!-- /wp:gallery -->"
 		],
 	},
@@ -101,6 +172,12 @@
 			"<div class=\"wp-block-group\">",
 			"</div>",
 			"<!-- /wp:group -->"
+		],
+	},
+	"Header template part": {
+		"prefix": "header template part, wp:header",
+		"body": [
+			"<!-- wp:template-part {\"slug\":\"header\",\"tagName\":\"header\"} /-->"
 		],
 	},
 	"Heading block": {
@@ -176,14 +253,7 @@
 	"Navigation block": {
 		"prefix": "block-navigation, wp:navigation",
 		"body": [
-			"<!-- wp:navigation --><!-- /wp:navigation -->"
-		],
-	},
-	"Navigation link block": {
-		"prefix": "block-navigation-link, wp:navigation-link",
-		"body": [
-			"<!-- wp:navigation-link {\"label\":\"WordPress\",\"url\":\"https: //wordpress.org/\"} -->",
-			"<!-- /wp:navigation-link -->"
+			"<!-- wp:navigation /-->"
 		],
 	},
 	"Next page block": {
@@ -210,6 +280,12 @@
 		"prefix": "block-post-author, wp:post-author",
 		"body": [
 			"<!-- wp:post-author /-->"
+		],
+	},
+	"Post Author Name block": {
+		"prefix": "block-post-author-name, wp:post-author-name",
+		"body": [
+			"<!-- wp:post-author-name /-->"
 		],
 	},
 	"Post comments count block": {
@@ -319,10 +395,10 @@
 	"Query pagination block": {
 		"prefix": "block-query-pagination, query-pagination, wp:query-pagination",
 		"body": [
-			"<!-- wp:query-pagination --><div class=\"wp-block-query-pagination\">",
+			"<!-- wp:query-pagination -->",
 			"<!-- wp:query-pagination-previous /-->",
 			"<!-- wp:query-pagination-numbers /-->",
-			"<!-- wp:query-pagination-next /--></div>",
+			"<!-- wp:query-pagination-next /-->",
 			"<!-- /wp:query-pagination -->",
 		],
 	},
@@ -344,6 +420,14 @@
 		"prefix": "block-rss, wp:rss",
 		"body": [
 			"<!-- wp:rss {\"blockLayout\":\"grid\",\"displayDate\":true,\"displayExcerpt\":true,\"displayAuthor\":true,\"excerptLength\":20,\"feedURL\":\"https://wordpress.org/news/\",\"itemsToShow\": 4} /-->"
+		],
+	},
+	"Row group block variation": {
+		"prefix": "block-row, wp:row, wp:flex-group, wp:flex",
+		"body": [
+			"<!-- wp:group {\"layout\":{\"type\":\"flex\",\"allowOrientation\":false}} -->",
+			"<div class=\"wp-block-group\"></div>",
+			"<!-- /wp:group -->"
 		],
 	},
 	"Search block": {
