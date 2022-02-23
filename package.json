@@ -27,6 +27,7 @@
 	"contributes": {
 		"snippets": [
 			{
+				"language": "html",
 				"path": "./.code-snippets"
 			}
 		]
