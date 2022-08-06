@@ -12,6 +12,21 @@ For example, to add a template part, start typing "wp:template-part" or just "te
 
 ## Release Notes
 
+### 1.3.0
+Added new blocks:
+Avatar
+Pattern
+No results
+Read more
+Table of contents
+
+Updated blocks:
+Cover
+
+Extra:
+Block pattern file header
+Comment template part
+
 ### 1.2.0
 
 Added new blocks:

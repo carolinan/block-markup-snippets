@@ -17,6 +17,12 @@
 			"<!-- wp:audio /-->"
 		],
 	},
+	"Avatar block": {
+		"prefix": "block-avatar, wp:avatar",
+		"body": [
+			"<!-- wp:avatar /-->"
+		],
+	},
 	"Buttons block": {
 		"prefix": "block-buttons, block-button, wp:buttons, wp:button",
 		"body": [
@@ -66,6 +72,12 @@
 			"<!-- /wp:columns -->",
 		],
 	},
+	"Comments template part": {
+		"prefix": "comments template part, comments area",
+		"body": [
+			"<!-- wp:template-part {\"slug\":\"comments\"} /-->"
+		],
+	},
 	"Comment author avatar block": {
 		"prefix": "block-comment-author-avatar, wp:comment-author-avatar, comment author avatar, comment avatar",
 		"body": [
@@ -76,6 +88,12 @@
 		"prefix": "block-comment-author-name, wp:comment-author-name, comment author name,",
 		"body": [
 			"<!-- wp:comment-author-name /-->"
+		],
+	},
+	"Comment content block": {
+		"prefix": "block-comment-content, wp:comment-content, comment content,",
+		"body": [
+			"<!-- wp:comment-content /-->"
 		],
 	},
 	"Comment date block": {
@@ -90,10 +108,16 @@
 			"<!-- wp:comment-edit-link /-->"
 		],
 	},
-	"Comment content block": {
-		"prefix": "block-comment-content, wp:comment-content, comment content,",
+	"Comment reply link block": {
+		"prefix": "block-comment-reply-link, wp:comment-reply-link, wp:comment-reply, comment reply,",
 		"body": [
-			"<!-- wp:comment-content /-->"
+			"<!-- wp:comment-reply-link /-->"
+		],
+	},
+	"Comment template block": {
+		"prefix": "wp:comment-template, comment template, block-comment-template, wp:comment-template",
+		"body": [
+			"<!-- wp:comment-template --><!-- /wp:comment-template -->"
 		],
 	},
 	"Comments pagination block": {
@@ -114,24 +138,29 @@
 			"<!-- /wp:comments-query-loop -->",
 		],
 	},
-	"Comment reply link block": {
-		"prefix": "block-comment-reply-link, wp:comment-reply-link, wp:comment-reply, comment reply,",
+	"Comments title block": {
+		"prefix": "wp:comments-title, comments title, block-comments-title",
 		"body": [
-			"<!-- wp:comment-reply-link /-->"
+			""
 		],
 	},
-	"Comment template block": {
-		"prefix": "wp:comment-template, comment template, block-comment-template, wp:comment-template",
+	"Cover block legacy": {
+		"prefix": "block-cover legacy, wp:cover legacy",
 		"body": [
-			"<!-- wp:comment-template --><!-- /wp:comment-template -->"
+			"<!-- wp:cover {\"url\":\"\",\"dimRatio\":60} -->",
+			"<div class=\"wp-block-cover has-background-dim-60 has-background-dim\"",
+			"style=\"background-image:url(\"\")\">",
+			"<div class=\"wp-block-cover__inner-container\">",
+			"</div>",
+			"</div>",
+			"<!-- /wp:cover -->"
 		],
 	},
 	"Cover block": {
 		"prefix": "block-cover, wp:cover",
 		"body": [
 			"<!-- wp:cover {\"url\":\"\",\"dimRatio\":60} -->",
-			"<div class=\"wp-block-cover has-background-dim-60 has-background-dim\"",
-			"style=\"background-image:url(\"\")\">",
+			"<div class=\"wp-block-cover\"><span aria-hidden=\"true\" class=\"wp-block-cover__background has-background-dim\"></span>",
 			"<div class=\"wp-block-cover__inner-container\">",
 			"</div>",
 			"</div>",
@@ -264,16 +293,22 @@
 			"<!-- /wp:nextpage -->"
 		],
 	},
+	"Page list block": {
+		"prefix": "block-page-list, wp:pagelist",
+		"body": [
+			"<!-- wp:page-list /-->"
+		],
+	},
 	"Paragraph block": {
 		"prefix": "block-paragraph, wp:paragraph",
 		"body": [
 			"<!-- wp:paragraph --><p></p><!-- /wp:paragraph -->"
 		],
 	},
-	"Page list block": {
-		"prefix": "block-page-list, wp:pagelist",
+	"Pattern block": {
+		"prefix": "block-pattern, wp:pattern",
 		"body": [
-			"<!-- wp:page-list /-->"
+			"<!-- wp:pattern {\"slug\":\"theme-slug/pattern-slug\"} /-->"
 		],
 	},
 	"Post Author block": {
@@ -282,16 +317,16 @@
 			"<!-- wp:post-author /-->"
 		],
 	},
+	"Post Author Biography block": {
+		"prefix": "block-post-author-biography, wp:post-author-biography",
+		"body": [
+			"<!-- wp:post-author-biography /-->"
+		],
+	},
 	"Post Author Name block": {
 		"prefix": "block-post-author-name, wp:post-author-name",
 		"body": [
 			"<!-- wp:post-author-name /-->"
-		],
-	},
-	"Post comments count block": {
-		"prefix": "block-post-comments-count, wp:post-comments-count",
-		"body": [
-			"<!-- wp:post-comments-count /-->"
 		],
 	},
 	"Post comment block": {
@@ -300,6 +335,12 @@
 			"<!-- wp:post-comment -->",
 			"<div class=\"wp-block-post-comment\"></div>",
 			"<!-- /wp:post-comment -->"
+		],
+	},
+	"Post comments count block": {
+		"prefix": "block-post-comments-count, wp:post-comments-count",
+		"body": [
+			"<!-- wp:post-comments-count /-->"
 		],
 	},
 	"Post comments block": {
@@ -392,6 +433,16 @@
 			"<!-- wp:post-template --><!-- /wp:post-template -->"
 		],
 	},
+	"Query No Results block": {
+		"prefix": "wp:query-no-results, no results",
+		"body": [
+			"<!-- wp:query-no-results -->",
+			"<!-- wp:paragraph } -->",
+			"<p></p>",
+			"<!-- /wp:paragraph -->",
+			"<!-- /wp:query-no-results -->",
+		],
+	},
 	"Query pagination block": {
 		"prefix": "block-query-pagination, query-pagination, wp:query-pagination",
 		"body": [
@@ -414,6 +465,12 @@
 		"prefix": "reusable, wp:core, block-reusable",
 		"body": [
 			"<!-- wp:core/block {\"ref\":123} /-->"
+		],
+	},
+	"Read More block": {
+		"prefix": "read more, wp:read-more",
+		"body": [
+			"<!-- wp:read-more /-->"
 		],
 	},
 	"RSS block": {
@@ -500,6 +557,12 @@
 			"<!-- /wp:table -->"
 		],
 	},
+	"Table of Contents block": {
+		"prefix": "table of contents, wp:table-of-contents",
+		"body": [
+			"<!-- wp:table-of-contents /-->",
+		],
+	},
 	"Tag cloud block": {
 		"prefix": "block-tag-cloud, wp:tag-cloud",
 		"body": [
@@ -532,6 +595,20 @@
 			"<!-- wp:video -->",
 			"<figure class=\"wp-block-video\"></figure>",
 			"<!-- /wp:video -->"
+		],
+	},
+	"pattern file header": {
+		"prefix": "pattern header, pattern file",
+		"body": [
+			"<?php",
+			"/**",
+			" * Title: ",
+			" * Slug: theme-slug-/pattern-slug",
+			" * Categories:",
+			" * Keywords:",
+			" * Block Types:",
+			" */",
+			"?>",
 		],
 	}
 }

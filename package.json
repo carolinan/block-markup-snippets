@@ -9,7 +9,7 @@
 	"author": {
 		"name": "Carolina Nymark"
 	},
-	"version": "1.2.0",
+	"version": "1.3.0",
 	"engines": {
 		"vscode": "^1.55.0"
 	},
@@ -27,6 +27,11 @@
 	"contributes": {
 		"snippets": [
 			{
+				"language": "html",
+				"path": "./.code-snippets"
+			},
+			{
+				"language": "php",
 				"path": "./.code-snippets"
 			}
 		]
@@ -41,15 +46,15 @@
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.55.0",
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.4",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "9.1.1",
 		"@types/node": "^12.11.7",
-		"eslint": "^7.19.0",
-		"@typescript-eslint/eslint-plugin": "^4.14.1",
-		"@typescript-eslint/parser": "^4.14.1",
-		"glob": "^7.1.6",
-		"mocha": "^8.2.1",
-		"typescript": "^4.1.3",
-		"vscode-test": "^1.5.0"
+		"eslint": "^8.2.1",
+		"@typescript-eslint/eslint-plugin": "^5.32.0",
+		"@typescript-eslint/parser": "^5.32.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"typescript": "^4.7.4",
+		"@vscode/test-electron": "^2.1.5"
 	}
 }
